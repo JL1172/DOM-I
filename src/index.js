@@ -39,20 +39,16 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-const aTag = document.querySelectorAll('a');
 
-aTag.forEach(n=> {
-   n.classList.add = 'italic';
-   n.style.fontStyle = 'italic';
-   return n;
-}); 
+
 const nav = document.querySelector('header nav');
-const services = nav.querySelector('a').textContent = 'Services';
+
+const services = nav.querySelector('a:nth-child(1)').textContent = 'Services';
 const product = nav.querySelector('a:nth-child(2)').textContent = 'Product';
-const vision = nav.querySelector('a:nth-child(2)').textContent = 'Vision';
-const features = nav.querySelector('a:nth-child(3)').textContent = 'Features'; 
-const about = nav.querySelector('a:nth-child(4)').textContent = 'About';
-const contact = nav.querySelector('a:nth-child(5)').textContent = 'Contact'
+const vision = nav.querySelector('a:nth-child(3)').textContent = 'Vision';
+const features = nav.querySelector('a:nth-child(4)').textContent = 'Features'; 
+const about = nav.querySelector('a:nth-child(5)').textContent = 'About';
+const contact = nav.querySelector('a:nth-child(6)').textContent = 'Contact'
  
 /*assigned class name 'italic' to all anchor tags
 assigned their text content and style*/ 
@@ -109,5 +105,14 @@ const p2 = lastSection.querySelector('p:nth-of-type(2)').textContent = '1 (888) 
 const p3 = lastSection.querySelector('p:nth-of-type(3)').textContent = 'sales@greatidea.io';
 
 //last section done
-const footer = document.querySelector('footer');
-const bold = footer.querySelector('footer a').textContent = "Copyright Great Idea! 2021"
+
+ const links = nav.querySelectorAll('a');
+ links.forEach(n=> {
+  n.style.fontStyle = 'italic';
+  n.classList.add('italic'); 
+ })
+ console.log(links)
+ const lastA = document.querySelector('footer > a');
+ lastA.classList.add('bold'); 
+ lastA.textContent = 'Copyright Great Idea! 2021';
+ console.log(lastA);
