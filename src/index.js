@@ -39,4 +39,75 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const aTag = document.querySelectorAll('a');
+
+aTag.forEach(n=> {
+   n.classList.add = 'italic';
+   n.style.fontStyle = 'italic';
+   return n;
+}); 
+const nav = document.querySelector('header nav');
+const services = nav.querySelector('a').textContent = 'Services';
+const product = nav.querySelector('a:nth-child(2)').textContent = 'Product';
+const vision = nav.querySelector('a:nth-child(2)').textContent = 'Vision';
+const features = nav.querySelector('a:nth-child(3)').textContent = 'Features'; 
+const about = nav.querySelector('a:nth-child(4)').textContent = 'About';
+const contact = nav.querySelector('a:nth-child(5)').textContent = 'Contact'
+ 
+/*assigned class name 'italic' to all anchor tags
+assigned their text content and style*/ 
+
+const logoImg = document.querySelector('#logo-img');
+
+logoImg.setAttribute('src','http://localhost:9000/img/logo.png');
+
+const section = document.querySelector('.cta-text');
+const sectionOneH1 = section.querySelector('h1').textContent = 'DOM Is Awesome';
+const button = section.querySelector('button').textContent = 'Get Started';
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'http://localhost:9000/img/cta.png';
+//section 2 done 
+
+const topContent = document.querySelector('.top-content');
+const featuredTextContent = topContent.querySelector('h4').textContent = 'Features';
+const pForTextContent = topContent.querySelector('p');
+pForTextContent.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+//section 3 done
+
+const secondTextBody = topContent.querySelectorAll('.text-content'); 
+const array = Array.from(secondTextBody); 
+const secondDiv = array[1];
+const h4Second = secondDiv.querySelector('h4').textContent = 'About';
+const pSecond = secondDiv.querySelector('p').textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//top content done
+
+const middleImg = document.querySelector('#middle-img').src = "http://localhost:9000/img/accent.png";
+const text_content = document.querySelectorAll('.text-content'); 
+const secondArray = Array.from(text_content);
+const thirdDiv = secondArray[2];
+const h4Third = thirdDiv.querySelector('h4').textContent = 'Services'
+const pThird = thirdDiv.querySelector('p').textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//third div done
+const fourthDiv = secondArray[3];
+const h4Fourth = fourthDiv.querySelector('h4').textContent = 'Product';
+const pFourth = fourthDiv.querySelector('p').textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//fourth div done
+
+const fifthDiv = secondArray[4];
+const h4Fifth = fifthDiv.querySelector('h4').textContent = 'Vision';
+const pFifth = fifthDiv.querySelector('p').textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//fifth done 
+
+const lastSection = document.querySelector('.contact');
+const h4_contact = lastSection.querySelector('h4').textContent = 'Contact';
+const p1 = lastSection.querySelector('p').textContent = '123 Way 456 Street Somewhere, USA';
+const p2 = lastSection.querySelector('p:nth-of-type(2)').textContent = '1 (888) 888-8888';
+const p3 = lastSection.querySelector('p:nth-of-type(3)').textContent = 'sales@greatidea.io';
+
+//last section done
+const footer = document.querySelector('footer');
+const bold = footer.querySelector('footer a').textContent = "Copyright Great Idea! 2021"
